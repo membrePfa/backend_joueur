@@ -33,7 +33,6 @@ class PaiementController extends Controller
       $paiement->date_expirationcarte= $request->date_expirationcarte;
       $paiement->code_cvv= $request->code_cvv;
      
-     
       $paiement->save();
       return response($paiement, Response::HTTP_CREATED);
     }
@@ -85,8 +84,7 @@ class PaiementController extends Controller
         $paiement->numero_de_carte = $request->numero_de_carte;
         $paiement->date_expirationcarte= $request->date_expirationcarte;
         $paiement->code_cvv= $request->code_cvv;
-       
-       
+      
         $paiement->update();
         return response($paiement, Response::HTTP_ACCEPTED);
         
